@@ -1,0 +1,3 @@
+com\objis\spring\demodomaine\Formation.class
+com\objis\spring\demodao\IFormationDao.class
+com\objis\controller\AppController.class
