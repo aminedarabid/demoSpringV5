@@ -1,0 +1,1 @@
+mvn clean package && xcopy /Y /Q .\target\*.war C:\apache-tomcat-8.5.37\webapps\spring.war

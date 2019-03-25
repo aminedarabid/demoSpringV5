@@ -5,7 +5,9 @@
     <title>Lourd</title>
 </head>
 <body>
+
     <h1>TEST</h1>
+	<a href="form.html">formulaire</a>
     <c:forEach items="${formationList}" var="form">
         <p>${form.theme}</p>
     </c:forEach>
