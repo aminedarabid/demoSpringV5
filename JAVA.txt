@@ -58,3 +58,13 @@ Dans le controller:
 	- construire un nouvelle objet
 	- appeler this.formationDAO.save()
 	- return this.index
+
+Ajouter package service
+	- class formationService
+	- Annotation @service
+	- dependance a formationDao
+	- methode getAll()
+	- methode create()
+
+Dans appcontroller
+	- remplacer les utilisations du DAO par le service
