@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import com.objis.spring.demodomaine.Formation;
 import com.objis.spring.service.FormationService;
 
@@ -20,7 +19,7 @@ public class AppController {
 	@Autowired
 	private FormationService formationservice;
 	
-    @RequestMapping("/")
+    @RequestMapping({"/", "/index"})
     public ModelAndView index (){
         ModelAndView MAV = new ModelAndView();
         MAV.setViewName("index");
@@ -36,11 +35,12 @@ public class AppController {
     }
     
     @RequestMapping(path = "/form", method = RequestMethod.POST)
-	ModelAndView validateForm(@RequestParam int id, @RequestParam(name = "theme") String theme) {
+    public String validateForm(@RequestParam int id, @RequestParam(name = "theme") String theme) {
 		// Sauvegarder l'article en BDD.
 		final Formation newform = new Formation(id, theme);
 		this.formationservice.create(newform);
 		// Renvoyer vers la page de liste des articles.
-		return this.index();
+		//return this.index();
+		return "redirect:/index.html";
     }
 }

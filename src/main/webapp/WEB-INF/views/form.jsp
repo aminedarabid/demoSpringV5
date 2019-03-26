@@ -1,18 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Form</title>
 </head>
 <body>
-Formulaire
-<form method="post">
-	<input type="text" placeholder="id" name="id">
-	<input type="text" placeholder="theme" name="theme">
-	<input type="submit">
-</form>
-
+    <h1>Formulaire</h1>
+    <form method="post" class="form">
+        <div class="form-row">
+            <div class="col">
+       			<input type="text" placeholder="id" name="id" class="form-control">
+            </div>
+            <br>
+            <div class="col">
+        		<input type ="text" placeholder ="theme" name="theme" class="form-control">
+            </div>
+            <br>
+            <div class="col">
+        		<input type="submit" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
 </body>
 </html>

@@ -9,14 +9,14 @@ import javax.persistence.Id;
 public class Formation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
     private String theme;
 
     public Formation() {
         super();
     }
 
-    public Formation(int id, String theme) {
+    public Formation(Integer id, String theme) {
         super();
         this.id = id;
         this.theme = theme;
@@ -27,11 +27,11 @@ public class Formation {
         return theme;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

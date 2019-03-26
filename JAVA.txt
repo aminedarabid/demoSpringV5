@@ -68,3 +68,9 @@ Ajouter package service
 
 Dans appcontroller
 	- remplacer les utilisations du DAO par le service
+
+
+Catalina : webservice
+Jasper: JSP
+Coyote: http
+
