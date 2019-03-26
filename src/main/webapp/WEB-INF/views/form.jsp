@@ -10,11 +10,9 @@
             <div class="col">
        			<input type="text" placeholder="id" name="id" class="form-control" value="${empty editFormation ? '' : editFormation.id}">
             </div>
-            <br>
             <div class="col">
         		<input type="text" placeholder="theme" name="theme" class="form-control" value="${empty editFormation ? '' : editFormation.theme}">
             </div>
-            <br>
             <div class="col">
         		<input type="submit" class="btn btn-primary">
             </div>

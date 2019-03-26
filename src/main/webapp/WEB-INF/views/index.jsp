@@ -7,8 +7,10 @@
 </head>
 <body>
 
-    <h1>TEST</h1>
+    <h1>Gestion des Formations</h1>
 	<a href="form.html">Ajouter</a>
+	<br>
+	<a href="search.html">rechercher</a>
 	<table class="table">
   <thead>
     <tr>

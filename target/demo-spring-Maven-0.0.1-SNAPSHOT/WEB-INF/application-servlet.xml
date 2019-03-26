@@ -48,6 +48,11 @@
                 <property name="generateDdl" value="true"/>
             </bean>
         </property>
+        <property name="jpaProperties">
+        	<props>
+        		<prop key="hibernate.hbm2ddl.auto">update</prop>
+        	</props>
+        </property>
     </bean>
 
     <!-- Etape 3 : TransactionManager -->

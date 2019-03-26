@@ -21,6 +21,7 @@ import com.objis.spring.service.FormationService;
 @Controller
 public class AppController {
 
+	private static final String String = null;
 	@Autowired
 	private FormationService formationservice;
 	
@@ -72,5 +73,18 @@ public class AppController {
 	public String validateUpdate(Formation formation) {
 		this.formationservice.validateUpdate(formation);
 		return "redirect:/index.html";
+	}
+	
+	@RequestMapping("/search")
+	public ModelAndView displaySearch(String search) {
+		ModelAndView mav = new ModelAndView("search");
+		return mav;
+	}
+	
+	@PostMapping("/search")
+	public ModelAndView search(String search) {
+		ModelAndView mav = new ModelAndView("search");
+		mav.addObject("resultList", this.formationservice.findByThemeContaining(search));
+		return mav;
 	}
 }

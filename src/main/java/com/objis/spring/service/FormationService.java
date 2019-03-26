@@ -34,5 +34,9 @@ public class FormationService {
 	public void validateUpdate(Formation formation) {
 		iformationDao.save(formation);
 	}
+
+	public List<Formation> findByThemeContaining(String search) {
+		return iformationDao.findByThemeContaining(search)	;	
+	}
 	
 }

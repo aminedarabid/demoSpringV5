@@ -7,10 +7,11 @@
 </head>
 <body>
 
-    <h1>Gestion des Formations</h1>
-	<a href="form.html">Ajouter</a>
-	<br>
-	<a href="search.html">rechercher</a>
+    <h1>chercher une Formation</h1>
+    <form method="post" class="search">
+	    <input type="text" placeholder="theme à chercher" name="search" class="form-control"">
+	    <input type="submit" class="btn btn-primary">
+    </form>
 	<table class="table">
   <thead>
     <tr>
@@ -21,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-  	<c:forEach items="${formationList}" var="form">
+  	<c:forEach items="${resultList}" var="form">
 	  <tr>
 	      <td>${form.id}</td>
 	      <td>${form.theme}</td>

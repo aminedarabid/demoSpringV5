@@ -41,7 +41,7 @@ public class App {
     @Test
     public void testListFormation() {
         springDao = (IFormationDao) appContext.getBean("IFormationDao");
-        List<Formation> formation = springDao.findByTheme(form.getTheme());
+        List<Formation> formation = springDao.findByThemeContaining(form.getTheme());
         for (Formation e : formation) {
             System.out.println(e.getTheme());
         }

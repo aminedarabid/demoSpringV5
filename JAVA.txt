@@ -74,3 +74,9 @@ Catalina : webservice
 Jasper: JSP
 Coyote: http
 
+Ajouter une page de recherche:
+	- Presentation : Nouvelle JSP <=search.html=>AppController
+	- metier : nouvelle methode dans le service 
+		-> decouper les mots cleds de recherche par espace ou tiret
+		-> pour chaque mot, appeler le DAO pour chercher en BDD
+	- DAO : changer la methode en findByThemeContaining()
