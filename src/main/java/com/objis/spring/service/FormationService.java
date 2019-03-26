@@ -1,5 +1,6 @@
 package com.objis.spring.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -36,7 +37,13 @@ public class FormationService {
 	}
 
 	public List<Formation> findByThemeContaining(String search) {
-		return iformationDao.findByThemeContaining(search)	;	
+		String[] arrayOfString;
+		List<Formation> listFormation = new ArrayList<Formation>(); 
+		arrayOfString = search.split("[ -;,]");
+		for(String word : arrayOfString) {
+			listFormation.addAll(iformationDao.findByThemeContaining(word));
+		}
+		return listFormation;
 	}
 	
 }
