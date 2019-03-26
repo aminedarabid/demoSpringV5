@@ -15,6 +15,7 @@
       <th scope="col">#</th>
       <th scope="col">Theme</th>
       <th scope="col">Supprimer</th>
+      <th scope="col">Editer</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,7 @@
 	      <td>${form.id}</td>
 	      <td>${form.theme}</td>
 	      <td><a href="delete.html?id=${form.id}"><img src="images/supp.png" style="width:20px"></a></td>
+	      <td><a href="edit.html?id=${form.id}"><img src="images/edit.png" style="width:20px"></a></td>
 	  </tr>
     </c:forEach>
   </tbody>

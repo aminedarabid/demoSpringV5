@@ -8,11 +8,11 @@
     <form method="post" class="form">
         <div class="form-row">
             <div class="col">
-       			<input type="text" placeholder="id" name="id" class="form-control">
+       			<input type="text" placeholder="id" name="id" class="form-control" value="${empty editFormation ? '' : editFormation.id}">
             </div>
             <br>
             <div class="col">
-        		<input type ="text" placeholder ="theme" name="theme" class="form-control">
+        		<input type="text" placeholder="theme" name="theme" class="form-control" value="${empty editFormation ? '' : editFormation.theme}">
             </div>
             <br>
             <div class="col">
