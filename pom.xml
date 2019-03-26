@@ -74,12 +74,6 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>com.objis.demomaven</groupId>
-            <artifactId>monappli-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 

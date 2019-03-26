@@ -22,4 +22,8 @@ public class FormationService {
 		iformationDao.save(newform);
 	}
 	
+	public void deletebyId(Integer id) {
+		iformationDao.deleteById(id);
+	}
+	
 }

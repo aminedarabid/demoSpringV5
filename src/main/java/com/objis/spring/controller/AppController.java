@@ -3,6 +3,8 @@ package com.objis.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,12 +37,20 @@ public class AppController {
     }
     
     @RequestMapping(path = "/form", method = RequestMethod.POST)
-    public String validateForm(@RequestParam int id, @RequestParam(name = "theme") String theme) {
-		// Sauvegarder l'article en BDD.
+    public String validateForm(@RequestParam Integer id, @RequestParam(name = "theme") String theme) {
+		// Sauvegarder formation en BDD.
 		final Formation newform = new Formation(id, theme);
 		this.formationservice.create(newform);
 		// Renvoyer vers la page de liste des articles.
 		//return this.index();
 		return "redirect:/index.html";
     }
+    
+    @GetMapping("/delete")
+	public String delete(Integer id) {
+		// Supprimer formation.
+    	this.formationservice.deletebyId(id);
+		// Renvoyer vers la vue welcome.
+    	return "redirect:/index.html";
+	}
 }

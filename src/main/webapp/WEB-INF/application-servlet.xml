@@ -13,6 +13,7 @@
         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
     <mvc:annotation-driven/>
+    <mvc:resources location="/images/" mapping="/images/**" />
 
     <!-- Etape 0 : Configuration Annotations -->
     <context:annotation-config/>
